@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const searchFeild = document.querySelector('.search');
-let parent = document.getElementById('doubleHolder');
+let parent = document.querySelector('#doubleHolder');
 /**
  * First approach double the button
  */
@@ -10,7 +10,7 @@ let parent = document.getElementById('doubleHolder');
 //     let btn = createElement('button', 'btn', 'double');
 
 //     let btn2 = createElement('button', 'btn', 'double');     
-      
+
 //     parent.appendChild(btn);
 //     parent.appendChild(btn2);
 //     addListener(btn);
@@ -36,11 +36,11 @@ let parent = document.getElementById('doubleHolder');
 // }
 
 parent.addEventListener('click', function(e) {
-    if(e.target.classList.contains('double')) {
-        let btn = createElement('button');
+    if (e.target.classList.contains('double')) {
+        let btn = document.createElement('button');
         btn.setAttribute('class', 'double');
         btn.innerText = 'double';
-        let btn2 = createElement('button');
+        let btn2 = document.createElement('button');
         btn2.setAttribute('class', 'double');
         btn2.innerText = 'double';
         parent.appendChild(btn);
@@ -64,7 +64,7 @@ async function fetchData(target) {
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
-  }
+}
 
 
 
